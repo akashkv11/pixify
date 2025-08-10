@@ -1,0 +1,93 @@
+/* ============CSS Reset =============== */
+
+#root {
+  --font-family: "Shadows Into Light", cursive;
+  --font-weight: 400;
+  --font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* 4. Base styles for body */
+body {
+  line-height: 1.5; /* Accessible line height */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering */
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 10. Layout container helper */
+.container {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
