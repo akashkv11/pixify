@@ -1,12 +1,12 @@
 /* =============================== */
 
 .card {
-  width: 100%;
+  width: 93%;
   margin: 0 auto;
   background-color: #f8fbfe;
   border-radius: 8px;
   z-index: 1;
-  padding: 1rem;
+  padding-inline: 1rem;
 }
 
 .anticon {
@@ -55,7 +55,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 1rem;
   padding-bottom: 0;
   background-color: #c9fcf9;
@@ -65,7 +65,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     height: 100%;
   }
@@ -75,7 +75,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
   }
 }
 
@@ -99,6 +98,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .form-layout {
@@ -107,7 +107,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
   gap: 1rem;
 
@@ -173,6 +173,7 @@
 .header {
   justify-content: flex-start;
   font-size: x-large;
+  margin: 0;
 }
 
 .content {
@@ -180,8 +181,8 @@
 }
 
 .logo {
-  height: 50px;
-  margin: 16px;
+  height: 45px;
+  margin: 15px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 30%;
 }
