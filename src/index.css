@@ -1,9 +1,20 @@
 /* ============CSS Reset =============== */
 
-#root {
-  --font-family: "Shadows Into Light", cursive;
-  --font-weight: 400;
+:root {
+  --font-family: "Comic Relief", system-ui;
+  --font-weight: 500;
   --font-style: normal;
+  --font-size: 1rem;
+  --font-size-lg: 1.5rem;
+  --font-size-sm: 0.75rem;
+  --font-size-xs: 0.5rem;
+  --font-size-xl: 2rem;
+  --line-height: 1.5rem;
+  --color: #000;
+  --background-color: #fff;
+  --border-radius: 0.5rem;
+  --border-width: 2px;
+  --text-color: rgb(25 164 197);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
@@ -13,6 +24,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-weight: var(--font-weight) !important;
 }
 
 /* 2. Remove default margin */
@@ -31,7 +43,7 @@
 body {
   line-height: 1.5; /* Accessible line height */
   -webkit-font-smoothing: antialiased; /* Improve text rendering */
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-family) !important;
   background-color: #fff;
   color: #000;
 }
@@ -88,6 +100,7 @@ h6 {
 .container {
   width: 100%;
   padding: 1rem;
+  padding-bottom: 0;
   margin: 0 auto;
   max-width: 100%;
 }

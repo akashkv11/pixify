@@ -10,6 +10,10 @@ import {
   type Tag,
 } from "./services/image-fetch";
 
+import logo from "/public/2.png";
+
+const { Content, Footer, Header } = Layout;
+
 function App() {
   const [form] = Form.useForm();
   const [collection, setCollection] = useState<string[]>([]);
@@ -33,15 +37,32 @@ function App() {
   return (
     <>
       <Layout className="main-layout container">
-        <div className="main-container">
-          <CustomForm
-            source={source}
-            onFinish={onFinish}
-            form={form}
-            setSource={setSource}
+        <Header className="header">
+          <img
+            src={logo} // your logo path
+            alt="Logo"
+            className="logo"
           />
-          <Gallery collection={collection} />
-        </div>
+          Pixify
+        </Header>
+        <Content className="content">
+          <div className="main-container">
+            <CustomForm
+              source={source}
+              onFinish={onFinish}
+              form={form}
+              setSource={setSource}
+            />
+            <Gallery collection={collection} />
+          </div>
+        </Content>
+        <Footer className="footer">
+          <p className="copyright">
+            <span>Copyright &copy;</span>
+            <span>{new Date().getFullYear()}</span>
+            <span>Pixify</span>
+          </p>
+        </Footer>
       </Layout>
     </>
   );

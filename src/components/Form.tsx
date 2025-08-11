@@ -1,13 +1,12 @@
 import {
-  Button,
   Form,
+  Input,
+  Modal,
   Radio,
   Select,
   Switch,
-  type FormInstance,
   Typography,
-  Modal,
-  Input,
+  type FormInstance,
 } from "antd";
 import React, { useState } from "react";
 import {
@@ -131,12 +130,14 @@ const CustomForm: React.FC<Props> = ({ form, onFinish, source, setSource }) => {
               </Form.Item>
               <div className="submit-layout">
                 <Form.Item label={null}>
-                  <Button type="primary" htmlType="submit">
-                    Submit
-                  </Button>
+                  <button type="submit" className="btn-17">
+                    <span className="text-container">
+                      <span className="text">Submit</span>
+                    </span>
+                  </button>
                 </Form.Item>
                 <div className="guest-layout">
-                  <Text>Guest</Text>
+                  <Text>Safe</Text>
                   <Switch onClick={handleGuestChange} checked={isGuest} />
                 </div>
               </div>
@@ -146,7 +147,7 @@ const CustomForm: React.FC<Props> = ({ form, onFinish, source, setSource }) => {
       </div>
 
       <Modal
-        title="Owner Mode"
+        title="Unsafe Mode"
         open={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
         centered
