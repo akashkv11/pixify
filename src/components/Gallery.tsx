@@ -10,7 +10,7 @@ import {
   ZoomInOutlined,
   ZoomOutOutlined,
 } from "@ant-design/icons";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 type Props = {
   collection: string[];
@@ -37,7 +37,33 @@ const Gallery: React.FC<Props> = ({ collection }) => {
         link.remove();
       });
   };
-
+  // 🔹 Memoize image elements
+  const images = useMemo(
+    () =>
+      collection.map((url, index) => (
+        <Image
+          key={index}
+          className="single-image"
+          src={url}
+          alt={`Image ${index + 1}`}
+          loading="lazy" // lazy loading
+          placeholder={
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+                backgroundColor: "#f0f0f0",
+              }}
+            >
+              <Spin />
+            </div>
+          }
+        />
+      )),
+    [collection] // only recompute when collection changes
+  );
   return (
     <div className="container masonry">
       <Image.PreviewGroup
@@ -80,27 +106,7 @@ const Gallery: React.FC<Props> = ({ collection }) => {
           onChange: (index) => setCurrent(index),
         }}
       >
-        {collection.map((url, index) => (
-          <Image
-            key={index}
-            className="single-image"
-            src={url}
-            alt={`Image ${index + 1}`}
-            placeholder={
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100%",
-                  backgroundColor: "#f0f0f0",
-                }}
-              >
-                <Spin />
-              </div>
-            }
-          />
-        ))}
+        {images}
       </Image.PreviewGroup>
     </div>
   );
