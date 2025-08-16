@@ -10,7 +10,7 @@ import {
   type Tag,
 } from "./services/image-fetch";
 
-import logo from "/public/2.png";
+import logo from "/2.png";
 
 const { Content, Footer, Header } = Layout;
 

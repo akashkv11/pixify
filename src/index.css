@@ -1,4 +1,5 @@
 /* ============CSS Reset =============== */
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 :root {
   --font-family: "Comic Relief", system-ui;
@@ -16,8 +17,6 @@
   --border-width: 2px;
   --text-color: rgb(25 164 197);
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
 /* 1. Use a more-intuitive box-sizing model */
 *,
