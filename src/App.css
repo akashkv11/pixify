@@ -92,6 +92,9 @@
 
 .ant-image-mask-info {
   text-align: center;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit-layout {
